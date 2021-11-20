@@ -1,22 +1,43 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace UnOrderedList
+namespace UnOrderedLinkedList
 {
-    public class program
+    class GFG
     {
-        static void Main(string[] args)
+
+       
+        public static void Main()
         {
-            Console.WriteLine("helloword\n");
-            LinkedList list = new LinkedList();
-            list.Add(56);
-            list.Add(30);
-            list.Add(76);
-            list.display();
-            // Console.WriteLine("Search Element" + list.search(30));
+           
+            LinkedList<int> myList = new LinkedList<int>();
+
+           
+            myList.AddLast(30);
+            myList.AddLast(56);
+            myList.AddLast(70);
+            
+            Console.WriteLine("Total nodes in myList are : " + myList.Count);
+
+            
+            foreach (int i in myList)
+            {
+                Console.WriteLine(i);
+            }
+
+            myList.AddFirst(70);
+            myList.AddFirst(30);
+            myList.AddFirst(56);
+            Console.WriteLine("Total nodes in myList are : " + myList.Count);
+
+            
+            foreach (int i in myList)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.ReadKey();
         }
     }
 }
