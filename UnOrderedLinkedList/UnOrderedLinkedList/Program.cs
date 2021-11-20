@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace UnOrderedLinkedList
 {
-    class GFG
+    class linkedlist
     {
 
        
@@ -17,25 +17,19 @@ namespace UnOrderedLinkedList
             myList.AddLast(30);
             myList.AddLast(56);
             myList.AddLast(70);
+
+            LinkedListNode<int> node = myList.Find(30);
+            myList.AddBefore(node,70);
+            myList.AddAfter(node,56);
             
             Console.WriteLine("Total nodes in myList are : " + myList.Count);
 
-            
+
             foreach (int i in myList)
             {
                 Console.WriteLine(i);
             }
-
-            myList.AddFirst(70);
-            myList.AddFirst(30);
-            myList.AddFirst(56);
-            Console.WriteLine("Total nodes in myList are : " + myList.Count);
-
             
-            foreach (int i in myList)
-            {
-                Console.WriteLine(i);
-            }
 
             Console.ReadKey();
         }
